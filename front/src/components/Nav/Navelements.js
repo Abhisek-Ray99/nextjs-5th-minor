@@ -45,6 +45,7 @@ export const Ul2 = styled.ul`
     align-items: center;
     list-style: none;
     margin: 4px 0 4px 30px;
+    /* background-color: red; */
     Link{
         margin: 2px;
         text-decoration: none;
@@ -83,6 +84,7 @@ export const LoginBtn = styled.a`
     font-family: 'Karla', sans-serif;
     padding: 14px;
     font-weight: bold;
+    margin-left: 40px;
 
 `
 export const SignupBtn = styled.a`

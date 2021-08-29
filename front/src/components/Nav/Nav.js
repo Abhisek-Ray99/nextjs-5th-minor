@@ -4,26 +4,33 @@ import Link from 'next/link';
 
 import logo from '../../../public/img/favicon.jpg';
 
-import { Div, Ul1, Ul2, Ul3, LoginBtn, SignupBtn, Link1, Link2} from './Navelements';
+import { Div, Ul1, Ul2, Ul3, LoginBtn, SignupBtn, Link1, Link2 } from './Navelements';
 
 const Nav = () => {
     return (
         <Div>
-                <Ul1>
-                    <Link href="/"><Image src={logo} /></Link>
-                    <Link href="/"><Link1>Let's Gtok</Link1></Link>
-                </Ul1>
-                <Ul2>
-                    <Link href="/"><Link2>About</Link2></Link>
-                    <Link href="/"><Link2>Blog</Link2></Link>
-                    <Link href="/"><Link2>Career</Link2></Link>
-                    <Link href="/"><Link2>Contact</Link2></Link>
-                </Ul2>
-                <Ul3>
-                    
-                    <Link href="/"><LoginBtn>Sign in</LoginBtn></Link>
-                    <Link href="/join"><SignupBtn>Sign up</SignupBtn></Link> 
-                </Ul3>
+            <Ul1>
+                <Link href="/"><Image src={logo} /></Link>
+                <Link href="/"><Link1>Let's Gtok</Link1></Link>
+            </Ul1>
+            <Ul2>
+                <Link href="/"><Link2>About</Link2></Link>
+                <Link href="/"><Link2>Blog</Link2></Link>
+                <Link href="/"><Link2>Career</Link2></Link>
+                <Link href="/"><Link2>Contact</Link2></Link>
+
+            </Ul2>
+            <Ul3>
+                <Link href="/admin/dashboard" className="mt-3 sm:mt-0 sm:ml-3">
+                    <a
+                        className=" flex px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-2 md:text-lg md:px-6"
+                    >
+                        Dashboard
+                    </a>
+                </Link>
+                <Link href="/"><LoginBtn>Sign in</LoginBtn></Link>
+                <Link href="/join"><SignupBtn>Sign up</SignupBtn></Link>
+            </Ul3>
         </Div>
     )
 }

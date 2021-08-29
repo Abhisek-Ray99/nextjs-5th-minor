@@ -28,3 +28,7 @@ export const BoldLink = styled.a`
     text-decoration: none;
     cursor: pointer;
 `
+
+export const GoogleBtn = styled.button`
+    
+`
