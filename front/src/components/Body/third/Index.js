@@ -25,13 +25,14 @@ const Third = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-                    >Why let's Gtok</motion.h1>
+                    >Why let's Covid-Visualizer</motion.h1>
                     <motion.p
                         variants={fadeLeft}
                         initial='hidden'
                         animate='visible'
                         transition={{ duration: 1 }}
-                    >Let's Gtok aims to provide a safe space online online for people to share and connect with genuine feelings. Users can share their feelings or activities even without revealing their identity</motion.p>
+                    >It is no surprise that there is such a high volume of data relating to the recent COVID-19 outbreak.
+                    Covid-Visualizer features high-performance graphical visualization to organize and display this data in such a way that it can be easily understand by doctors, researchers, and even the public. </motion.p>
                     <Button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95, backgroundColor: '#67F6E7' }}
