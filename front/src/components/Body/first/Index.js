@@ -19,7 +19,7 @@ const First = () => {
                     <Head_p>There is no doubt that we are currently living in unprecedented times. With all of the uncertainty, it can be hard to see where God and his plan fits in with the COVID-19 outbreak.
                     <br/>
 
-                    We have complied a few poems, inspirational quotes, reflections and prayers that perfectly encapsulate the emotions many of us are feeling during this time. While reading them, take some quiet time to reflect on the words and what they mean to you.</Head_p>
+                    </Head_p>
                 </Div_1>
                 <Div_2>
                     <Btn1 href="/">
