@@ -167,7 +167,8 @@ const Nav = () => {
                             )}
                         </Popover>
 
-                        <a href="" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                                                        
+                        <a href="/#contact-hero" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Contact
                         </a>
 

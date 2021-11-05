@@ -4,23 +4,37 @@ import React, { useContext, useState } from 'react'
 import { BoxContainer, FormContainer, MutedLink, BoldLink } from '../Commonstyle'
 import { AccountContext } from '../accountContext'
 
+import valid from '../../../../utils/valid'
+import { DataContext } from '../../../../store/GlobalState'
+
 const Signupform = () => {
 
     const { switchToSignin } = useContext(AccountContext)
 
-    const initialState = {name: '', email: '', password: '', cf_password: ''}
+    const initialState = { name: '', email: '', password: '', cf_password: '' }
     const [userData, setUserData] = useState(initialState)
-    const {name, email, password, cf_password} = userData
+    const { name, email, password, cf_password } = userData
+
+    const { state, dispatch } = useContext(DataContext)
 
     const handleChangeInput = (e) => {
-        const {name, value} = e.target
-        setUserData({...userData, [name]: value})
+        const { name, value } = e.target
+        setUserData({ ...userData, [name]: value })
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        const errMsg = valid(name, email, password, cf_password)
+        if (errMsg) {
+            return dispatch({ type: 'NOTIFY', payload: {error: errMsg} })
+        }
+        dispatch({ type: 'NOTIFY', payload: { success: 'OK' } })
     }
 
     return (
         <BoxContainer>
             <FormContainer>
-                <form className="mt-8 space-y-6" onSubmit="handleSubmit">
+                <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                     <input type="hidden" name="remember" defaultValue="true" />
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>

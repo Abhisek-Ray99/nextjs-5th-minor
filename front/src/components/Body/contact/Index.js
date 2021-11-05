@@ -5,7 +5,7 @@ import { style, Div, FormContainer, ThreeColumn, Column1, Column2, Column3, Inpu
 
 const Contact = () => {
     return (
-        <Div>
+        <Div id="contact-hero">
             <FormContainer>
                 <form action="POST">
                     <ThreeColumn>
