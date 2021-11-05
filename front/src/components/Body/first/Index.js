@@ -16,6 +16,7 @@ const First = () => {
             <Share>
                 <Div_1>
                     <Head>Share feelings without being judged</Head>
+
                     <Head_p>lorem ipsum dolor sit lorem ipsum lorem10 lorem ipsum lorem lorem  lorem l orem lorem10vSit ex non consequat occaecat consectetur dolore. Commodo labore ullamco adipisicing ipsum sit proident est qui reprehenderit. Fugiat do ipsum fugiat nisi.</Head_p>
                 </Div_1>
                 <Div_2>
