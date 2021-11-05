@@ -39,7 +39,7 @@ const profile = () => {
 
                                     <div>
                                         <label htmlFor="about" className="block text-sm font-medium text-gray-700">
-                                            About
+                                             
                                         </label>
                                         <div className="mt-1">
                                             <textarea

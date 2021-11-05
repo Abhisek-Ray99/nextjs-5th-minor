@@ -16,7 +16,7 @@ export const FormContainer = styled.div`
     position: absolute;
     width: 90%;
     min-height: 100vh;
-    height: 140%;
+    height: 145%;
     background-color: #F9F3EE;
     left: 0;
     right: 0;
