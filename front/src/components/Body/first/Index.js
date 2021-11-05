@@ -22,7 +22,9 @@ const First = () => {
                     <Btn1 href="/">
                         <>
                             <Image src={img3} />
-                            <span>Share My Feelings</span>
+                            <span>Our Feelings</span>
+
+
                         </>
 
                     </Btn1>

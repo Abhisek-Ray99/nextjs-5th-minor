@@ -56,9 +56,9 @@ const Second = () => {
                                 <FiMoreHorizontal />
                             </IconContext.Provider>
                         </Status>
-                        <Sub>So excited to finally get my hands on the latest ps5</Sub>
-                        <User>@josh</User>
-                        <Time>a few seconds ago</Time>
+                        <Sub>Dashboard is easy to use</Sub>
+                        <User>@puru</User>
+                        <Time>1 day ago</Time>
                         <Icon>
                             <IconContext.Provider value={{className: "icon1"}}>
                                 <AiFillHeart />
