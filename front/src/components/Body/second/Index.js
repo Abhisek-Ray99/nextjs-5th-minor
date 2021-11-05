@@ -54,7 +54,7 @@ const Second = () => {
                             </IconContext.Provider>
                         </Status>
                         <Sub>Dashboard is easy to use</Sub>
-                        <User>@josh</User>
+                        <User>@puru</User>
                         <Time>1 day ago</Time>
                         <Icon>
                             <IconContext.Provider value={{className: "icon1"}}>

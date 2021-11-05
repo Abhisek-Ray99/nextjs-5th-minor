@@ -25,7 +25,7 @@ const First = () => {
                     <Btn1 href="/">
                         <>
                             <Image src={img3} />
-                            <span>Our Feelingsj</span>
+                            <span>Our Feelings</span>
                         </>
 
                     </Btn1>
