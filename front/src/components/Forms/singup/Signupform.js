@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 
 import { BoxContainer, FormContainer, MutedLink, BoldLink } from '../Commonstyle'
@@ -8,10 +8,19 @@ const Signupform = () => {
 
     const { switchToSignin } = useContext(AccountContext)
 
+    const initialState = {name: '', email: '', password: '', cf_password: ''}
+    const [userData, setUserData] = useState(initialState)
+    const {name, email, password, cf_password} = userData
+
+    const handleChangeInput = (e) => {
+        const {name, value} = e.target
+        setUserData({...userData, [name]: value})
+    }
+
     return (
         <BoxContainer>
             <FormContainer>
-                <form className="mt-8 space-y-6" action="#" method="POST">
+                <form className="mt-8 space-y-6" onSubmit="handleSubmit">
                     <input type="hidden" name="remember" defaultValue="true" />
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>
@@ -20,12 +29,14 @@ const Signupform = () => {
                             </label>
                             <input
                                 type="text"
-                                name="first-name"
-                                id="first-name"
+                                id="name"
                                 autoComplete="given-name"
                                 required
                                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 rounded-t-md placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 placeholder="Full Name"
+                                name="name"
+                                value={name}
+                                onChange={handleChangeInput}
                             />
                         </div>
                         <div>
@@ -34,12 +45,14 @@ const Signupform = () => {
                             </label>
                             <input
                                 id="email-address"
-                                name="email"
                                 type="email"
                                 autoComplete="email"
                                 required
                                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 placeholder="Email address"
+                                name="email"
+                                value={email}
+                                onChange={handleChangeInput}
                             />
                         </div>
                         <div>
@@ -48,12 +61,14 @@ const Signupform = () => {
                             </label>
                             <input
                                 id="password"
-                                name="password"
                                 type="password"
                                 autoComplete="current-password"
                                 required
                                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 placeholder="Password"
+                                name="password"
+                                value={password}
+                                onChange={handleChangeInput}
                             />
                         </div>
                         <div>
@@ -62,12 +77,14 @@ const Signupform = () => {
                             </label>
                             <input
                                 id="password"
-                                name="password"
                                 type="password"
                                 autoComplete="confirm-password"
                                 required
                                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                placeholder="Password"
+                                placeholder="Confirm Password"
+                                name="cf_password"
+                                value={cf_password}
+                                onChange={handleChangeInput}
                             />
                         </div>
                     </div>
