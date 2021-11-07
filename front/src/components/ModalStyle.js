@@ -12,7 +12,7 @@ export const MDiv = styled.div`
     .modal-content-wrapper{
         position: fixed;
         width: 600px;
-        height: 300px;
+        height: 400px;
         background: white;
         margin: auto;
         top: 0;
