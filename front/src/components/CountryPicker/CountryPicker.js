@@ -17,6 +17,7 @@ const CountryPicker = ({ handleCountryChange }) => {
             <NativeSelect
                 defaultValue=""
                 onChange={(e) => handleCountryChange(e.target.value)}
+                className={styles.inputCase}
             >
                 <option value="">Global</option>
                 {fetchedCountries.map((country, key) => (

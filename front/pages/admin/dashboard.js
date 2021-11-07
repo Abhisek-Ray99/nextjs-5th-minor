@@ -6,7 +6,7 @@ import Visualizer1 from '../../src/components/dashboard/visualizer1/Visualizer1'
 const Dashboard = () => {
     return (
         <Admin>
-            <Visualizer1/>
+            <Visualizer1 />
         </Admin>
     )
 }

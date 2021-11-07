@@ -30,7 +30,7 @@ const First = () => {
                     <Btn1 href="#" onClick={() => modalRef.current.open()}>
                         <>
                             <Image src={img3} />
-                            <span>Know the application</span>
+                            <span>More About Visualizer</span>
                         </>
 
                     </Btn1>

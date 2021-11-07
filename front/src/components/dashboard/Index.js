@@ -186,7 +186,7 @@ export default function Example(props) {
       </Disclosure>
 
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div style={{background: '#DAE3FE'}}>
           {props.children}
         </div>
       </main>
