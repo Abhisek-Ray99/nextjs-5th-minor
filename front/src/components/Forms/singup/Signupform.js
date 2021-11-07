@@ -6,6 +6,7 @@ import { AccountContext } from '../accountContext'
 
 import valid from '../../../../utils/valid'
 import { DataContext } from '../../../../store/GlobalState'
+import {postData} from '../../../../utils/fetchData'
 
 const Signupform = () => {
 
@@ -19,22 +20,28 @@ const Signupform = () => {
 
     const handleChangeInput = (e) => {
         const { name, value } = e.target
-        setUserData({ ...userData, [name]: value })
+        setUserData({...userData, [name]: value })
+        dispatch({ type: 'NOTIFY', payload: {} })   
     }
 
-    const handleSubmit = e => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
         const errMsg = valid(name, email, password, cf_password)
         if (errMsg) {
             return dispatch({ type: 'NOTIFY', payload: {error: errMsg} })
         }
-        dispatch({ type: 'NOTIFY', payload: { success: 'OK' } })
+        dispatch({ type: 'NOTIFY', payload: { loading: true } })
+
+        const res = await postData('auth/register', userData)
+        if (res.err) {
+            return dispatch({ type: 'NOTIFY', payload: {error: res.err} })
+        }
+        return dispatch({ type: 'NOTIFY', payload: { success: res.msg  } })
     }
 
     return (
         <BoxContainer>
-            <FormContainer>
-                <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+            <FormContainer className="mt-8 space-y-6" onSubmit={handleSubmit}>
                     <input type="hidden" name="remember" defaultValue="true" />
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>
@@ -107,13 +114,12 @@ const Signupform = () => {
                             type="submit"
                             className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                            Sign up
+                            Create an Account
                         </button>
                     </div>
                     <MutedLink>
                         Already have an Account / <BoldLink onClick={switchToSignin}>Login</BoldLink>
                     </MutedLink>
-                </form>
             </FormContainer>
         </BoxContainer>
     )

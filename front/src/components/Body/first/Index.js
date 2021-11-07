@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image'
@@ -9,8 +9,13 @@ import img3 from '../../../../public/img/200w.gif'
 
 import { Share, Div, Div_1, Head, Head_p, Div_2, Btn1, Btn2, Quote,StyledImage,Wrap } from './Firstelements'
 
+import Modal from '../../Modal'
+
 
 const First = () => {
+
+    const modalRef = useRef()
+
     return (
         <Div>
             <Share>
@@ -22,13 +27,14 @@ const First = () => {
                     </Head_p>
                 </Div_1>
                 <Div_2>
-                    <Btn1 href="/">
+                    <Btn1 href="#" onClick={() => modalRef.current.open()}>
                         <>
                             <Image src={img3} />
-                            <span>Our Feelingsj</span>
+                            <span>Our Feelings</span>
                         </>
 
                     </Btn1>
+                    <Modal  ref={modalRef}>Hello world</Modal>
                     <Link href="/"><Btn2>See Other Feelings</Btn2></Link>
                 </Div_2>
             </Share>

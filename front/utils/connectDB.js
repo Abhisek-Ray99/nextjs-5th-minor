@@ -5,7 +5,7 @@ const connectDB = () => {
         console.log('Already connected.')
         return;
     }
-    mongoose.connect(process.env.MONGO_URL, {
+    mongoose.connect(process.env.MONGODB_URL, {
         useCreateIndex: true,
         useFindAndModify: false,
         userNewUrlParser: true,
