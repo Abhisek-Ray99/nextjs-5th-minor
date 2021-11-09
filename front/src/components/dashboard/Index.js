@@ -13,7 +13,7 @@ const user = {
 const navigation = [
   { name: 'Dashboard', href: '/admin/dashboard', current: true },
   { name: 'India-Covid Cases', href: '/admin/cases', current: true },
-  { name: 'Survey', href: '/admin/survey', current: true}
+  { name: 'Compare Cases', href: '/admin/compare-cases', current: true}
 ]
 const userNavigation = [
   { name: 'Profile', href: '#' },

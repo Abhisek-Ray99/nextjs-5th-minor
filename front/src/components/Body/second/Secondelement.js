@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Div = styled.div`
     position: relative;
     width: auto;
-    height: 120vh;
+    height: 130vh;
     background-color: #E1CACA;
     h1{
         font-size: 60px;
@@ -25,7 +25,7 @@ export const Div = styled.div`
         grid-gap: 4rem 3rem;
         div{
             width: 544px;
-            height: 315px;
+            height: 335px;
             background-color: #fff;
             border: 2px solid #95918E;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
